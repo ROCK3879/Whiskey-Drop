@@ -7,25 +7,120 @@
     <title>Whiskey Drop | Taste a new whiskey every month</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Containers */
+        .alert-container {}
+
+        .callout-container {
+            height: 100vh;
+            background: url('images/whiskey-background.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .opaque-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .quotes-container {}
+
+        .features-container {}
+
+        /* Block dividers */
+        .block-divider {
+            width: 75px;
+            height: 5px;
+            border: 0;
+            background-color: #444;
+        }
+
+        .block-divider--orange {
+            background-color: #f05f40;
+        }
+
+        .block-divider--short {
+            width: 35px;
+        }
+
+        /* Jumbotron */
+        .jumbotron {
+            background-color: transparent;
+        }
+
+        .jumbotron h1 {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron .lead {
+            color: #a7a7a7;
+            margin: 25px 0;
+        }
+
+        .jumbotron small {
+            font-size: 60%;
+            font-style: italic;
+            color: #d0d0d0;
+        }
+
+        /* Buttons */
+        .btn--cta {
+            font-weight: bold;
+            border-radius: 23px;
+            width: 160px;
+        }
+
+        .btn--red {
+            color: white;
+            background-color: #f05f40;
+            border-color: #f05f40;
+        }
+
+        .btn--red:hover,
+        .btn--red:active,
+        .btn--red:focus,
+        .btn--red:active:focus {
+            background-color: #df4929;
+            border-color: #df4929;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <!--Nav-->
     <nav class="navbar navbar-light navbar-expand-sm bg-light">
         <a href="/" class="navbar-brand">
-                    Whiskey Drop</a>
-
+            Whiskey Drop
+        </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span></button>
-
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
                 <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="">About</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#">About</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Whiskeys
-        </a>
+                        Whiskeys
+                    </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Irish</a>
                         <a class="dropdown-item" href="#">Scotch</a>
@@ -33,41 +128,37 @@
                         <a class="dropdown-item" href="#">American</a>
                     </div>
                 </li>
-
-                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="">Sign In / Sign Up</a></li>
+                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="#">Sign In / Sign Up</a></li>
             </ul>
         </div>
         <div class="d-none d-md-block">
             <p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door</i></p>
             <a href="/login">Sign In / Sign Up</a>
         </div>
-        <!--</div>-->
     </nav>
-    <article class="container mt-3">
-        <div class="row d-none d-sm-block">
-            <div class="col-12">
-                <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
-                </div>
-            </div>
-        </div>
-        <!-- Callout -->
+
+    <!-- Callout -->
+    <div class="container-fluid callout-container">
+        <div class="opaque-overlay"></div>
         <div class="row">
             <div class="col-12">
                 <section class="callout jumbotron text-center">
-                    <h1>The finest whiskeys delivered to your doorstep.</h1>
+                    <h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
+                    <hr class="block-divider block-divider--orange">
                     <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
                         <s class="d-none d-sm-inline">€19.99</s>
                         <span class="d-inline d-sm-none"><br></span>
-                        <strong><mark>First one is free!</mark></strong></p>
+                        <strong><mark>First one is free!</mark></strong>
+                    </p>
                     <p><button class="btn btn-lg btn-success" data-toggle="modal" data-target="#signUpModal">Sign Up!</button></p>
                     <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
                 </section>
             </div>
         </div>
-        <!-- /.callout -->
-        <hr>
-        <!-- Quotes -->
+    </div>
+
+    <!-- Quotes -->
+    <div class="container quotes-container">
         <section class="quotes">
             <div class="row">
                 <div class="col-12 my-5">
@@ -79,7 +170,7 @@
                 <div class="col-12 col-md-6">
                     <div class="media">
                         <div class="d-none d-sm-block">
-                            <img src="images/girl-image.png" class="rounded-circle mr-3" height=100 width=100>
+                            <img src="images/girl-image.png" class="rounded-circle mr-3" height="100" width="100">
                         </div>
                         <div class="media-body">
                             <blockquote class="blockquote">
@@ -92,21 +183,22 @@
                 <div class="col-12 col-md-6">
                     <div class="media">
                         <div class="d-none d-sm-block">
-                            <img src="images/guy-image.png" class="rounded-circle mr-3" height=100 width=100>
+                            <img src="images/guy-image.png" class="rounded-circle mr-3" height="100" width="100">
                         </div>
                         <div class="media-body">
                             <blockquote class="blockquote">
                                 <p>I haven't been sober for months!</p>
-                                <footer class="blockquote-footer">Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                                <footer class="blockquote-footer">John Doe on <cite title="Twitter">Twitter</cite></footer>
                             </blockquote>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- /.quotes -->
-        <hr>
-        <!-- Features -->
+    </div>
+
+    <!-- Features -->
+    <div class="features-container">
         <section class="features">
             <div class="row">
                 <div class="col-12 my-5">
@@ -119,36 +211,36 @@
                     <div class="feature">
                         <h3><i class="fas fa-gift d-none d-sm-inline"></i> Feature 1 <span class="badge badge-success">New!</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        <p><a class="btn btn-sm btn-light" href="#">Read More</a></p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="feature">
                         <h3><i class="fas fa-credit-card d-none d-sm-inline"></i> Feature 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        <p><a class="btn btn-sm btn-light" href="#">Read More</a></p>
                     </div>
                 </div>
                 <div class="col-12 d-md-none d-lg-block col-lg-4">
                     <div class="feature">
                         <h3><i class="fas fa-times-circle d-none d-sm-inline"></i> Feature 3</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        <p><a class="btn btn-sm btn-light" href="#">Read More</a></p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- /.features -->
-    </article>
-    
+    </div>
+
+    <!-- Sign Up Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Sign Up To Whiskey Drop!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -176,5 +268,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
-</html>
