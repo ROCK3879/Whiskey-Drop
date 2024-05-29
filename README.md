@@ -19,16 +19,6 @@ Welcome to Whiskey Drop, where you can taste a new whiskey every month! Our serv
 
 ## File Structure
 
-```plaintext
-Whiskey-Drop/
-├── images/
-│   ├── whiskey-background.jpg
-│   ├── girl-image.png
-│   └── guy-image.png
-├── index.html
-├── README.md
-└── css/
-    └── style.css
 
 ## Sections 
 
